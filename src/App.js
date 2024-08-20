@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <ItemListContainer text="Test" />
+      <ItemListContainer text="Texto enviado como prop" />
     </div>
   );
 }
