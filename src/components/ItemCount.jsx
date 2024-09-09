@@ -14,7 +14,7 @@
     };
 
     const agregarAlCarrito = () => {
-        alert(`Has agregado ${count} productos al carrito.`);
+        alert(`Has agregado ${count} productos al carrito`);
     };
 
     return (
