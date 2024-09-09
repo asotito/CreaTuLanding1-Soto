@@ -18,11 +18,14 @@
     };
 
     return (
-        <div class="flex justify-center p-4">
-        <button onClick={disminuir} class="px-2 border-2 border-black bg-gray-400">-</button>
-        <span class="px-2 border-2 border-black">{count}</span>
-        <button onClick={aumentar} class="px-2 border-2 border-black bg-gray-400">+</button>
-        <button onClick={agregarAlCarrito} class="py-2 px-4 bg-gray-400 rounded-lg">Agregar al carrito</button>
+        <div class="flex flex-col space-y-6 justify-center p-4">
+            <h1>Cantidad:</h1>
+            <div class="flex bg-gray-400 justify-between content-center rounded-xl">
+                <button onClick={disminuir} class="px-2 text-3xl">-</button>
+                <span class="px-2 text-3xl">{count}</span>
+                <button onClick={aumentar} class="px-2 text-3xl">+</button>
+            </div>
+            <button onClick={agregarAlCarrito} class="py-2 px-4 bg-gray-400 rounded-lg">Agregar al carrito</button>
         </div>
     );
     };
