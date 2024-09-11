@@ -20,14 +20,15 @@ const ItemListContainer = () => {
                 setLoading(false);
             });
     }, [categoryId]);
+
     return(
-        <div class="justify-center text-center">
+        <div class="justify-center text-center mt-14">
             {loading ? (
-                <div class="content-center w-full h-full text-3xl">
+                <div class="content-center w-full h-96 text-3xl">
                     <h1>Cargando productos...</h1>
                 </div>
             ) : (
-                <div>
+                <div class="">
                     <div class="p-10 uppercase text-4xl">
                         <h1 >{categoryId ? `${categoryId}` : 'Todos los Productos'}</h1>
                     </div>
