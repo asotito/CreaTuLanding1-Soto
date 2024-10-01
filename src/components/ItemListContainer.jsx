@@ -15,6 +15,7 @@ const ItemListContainer = () => {
             getItems(setProductData);
         }
     }, [categoryId]);
+
     return(
         <div class="justify-center text-center">
             {
