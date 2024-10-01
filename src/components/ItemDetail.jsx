@@ -2,7 +2,7 @@ import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ product }) => {
     return (
-      <div class="flex justify-center items-center">
+      <div class="flex justify-center items-center pt-28">
         <div class="flex flex-col justify-center items-center shadow-lg w-3/4 space-y-9">
         <div class="justify-center items-center">
           <img src={product.link} alt={product.name} class="rounded-lg h-80 w-full" />
