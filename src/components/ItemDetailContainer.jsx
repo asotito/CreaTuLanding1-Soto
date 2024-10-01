@@ -1,25 +1,14 @@
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
-import { obtainProductsById } from "../data/products";
+import { getItem } from "../firebase/db";
 
 function ItemDetailContainer(){
     const {id} = useParams();
     const [product, setProduct] = useState([]);
     const [loading, setLoading] = useState(null);
     useEffect(() => {
-        console.log("ID recibido desde la URL:", id);
-        setLoading(true);
-        obtainProductsById(id)
-            .then((data) => {
-                console.log("Productos obtenidos:", data);
-                setProduct(data);
-                setLoading(false);
-        })
-        .catch(error => {
-            console.error("Error fetching products:", error);
-            setLoading(false);
-        });
+        getItem(setProduct, id);
     }, [id]);
 
     return (
