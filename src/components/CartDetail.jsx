@@ -20,7 +20,7 @@ function CartDetail(){
     return (
         <div class="justify-center text-center pt-16">
             <div class="p-10 uppercase text-4xl">
-                <h2>Cart Details</h2>
+                <h2>Cart Details:</h2>
             </div>
             <div class="text-xl">
             {cart.length === 0 ? (
