@@ -17,7 +17,7 @@ const ItemListContainer = () => {
     }, [categoryId]);
 
     return(
-        <div class="justify-center text-center">
+        <div class="justify-center text-center pt-16">
             {
                 <div>
                     <div class="p-10 uppercase text-4xl">

@@ -1,4 +1,4 @@
-import { getFirestore, collection, getDocs, doc, getDoc, query, where } from "firebase/firestore";
+import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc } from "firebase/firestore";
 import { app } from "./config"
 
 const db = getFirestore(app);
@@ -32,4 +32,14 @@ export const getItem = async(setProduct, id) => {
     const docSnap = await getDoc(docRef);
 
     setProduct(docSnap.data());
+}
+
+export const addItem = async (items, total) => {
+    const docRef = await addDoc(collection(db, "orders"), {
+        products: items,
+        total: total,
+    });
+    const orderId = docRef.id;
+    console.log("Document written with ID: ", orderId);
+    return orderId;
 }

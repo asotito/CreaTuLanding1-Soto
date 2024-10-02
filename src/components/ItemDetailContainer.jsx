@@ -6,15 +6,13 @@ import { getItem } from "../firebase/db";
 function ItemDetailContainer(){
     const {id} = useParams();
     const [product, setProduct] = useState([]);
-    const [loading, setLoading] = useState(null);
     useEffect(() => {
         getItem(setProduct, id);
     }, [id]);
 
     return (
         <div className="justify-center text-center">
-            {loading? <p>Loading...</p> 
-            : product ? (
+            {product ? (
                 <ItemDetail product={product}/>
             ) : (
                 <p>Producto no encontrado.</p>

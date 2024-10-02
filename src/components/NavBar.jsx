@@ -21,7 +21,7 @@ function NavBar(){
                 </ul>
             </div>
             <div class="hidden md:block">
-                <CartWidget />
+            <Link to="/cart"><CartWidget /></Link>
             </div>
             <div class="md:hidden">
                 <button class="bg-slay-400" onClick={toggleVisibility}>
@@ -42,7 +42,7 @@ function NavBar(){
                                 </ul>
                             </div>
                             <div class="flex w-full justify-center border-b-2 py-5">
-                                <CartWidget />
+                                <Link to="/cart" onClick={toggleVisibility}><CartWidget /></Link>
                             </div>
                         </div>
                     </div>
