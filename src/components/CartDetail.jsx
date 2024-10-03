@@ -33,15 +33,11 @@ function CartDetail(){
                         </p>
                     </div>
                 ))
-                (
-                    <div>
-                        <div class="p-10 uppercase text-4xl">
-                            <h1>Total a pagar: ${totalPrice}</h1>
-                        </div>
-                        <button onClick={createOrder} class="py-2 px-4 bg-gray-400 rounded-lg">Comprar</button>
-                    </div>
-                )
             )}
+                <div class="p-10 uppercase text-4xl">
+                    <h1>Total a pagar: ${totalPrice}</h1>
+                </div>
+                <button onClick={createOrder} class="py-2 px-4 bg-gray-400 rounded-lg">Comprar</button>
             </div>
             {
                 isVisible && (
