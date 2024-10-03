@@ -21,9 +21,9 @@ return (
         {
             isVisible ? (
                 <div class="flex bg-gray-400 justify-between content-center rounded-xl">
-                <button onClick={add} class="px-2 text-3xl">-</button>
+                <button onClick={add} class="px-2 text-3xl">+</button>
                 <span class="px-2 text-3xl">{count}</span>
-                <button onClick={subtract} class="px-2 text-3xl">+</button>
+                <button onClick={subtract} class="px-2 text-3xl">-</button>
             </div>
             ) : null
         }
